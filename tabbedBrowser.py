@@ -21,22 +21,22 @@ class MainWindow(QMainWindow):
 		navtb = QToolBar("Navigation")
 		self.addToolBar(navtb)
 
-		back_btn = QAction(QIcon('back.png'), 'back',self)
+		back_btn = QAction(QIcon('back',self)
 		back_btn.setStatusTip("Back to previous page")
 		back_btn.triggered.connect(lambda:self.tabs.currentWidget().back())
 		navtb.addAction(back_btn)
 
-		forward_btn = QAction(QIcon('forward.png'),'Forward', self)
+		forward_btn = QAction(QIcon('Forward', self)
 		forward_btn.setStatusTip("Forward to next page")
 		forward_btn.triggered.connect(lambda:self.tabs.currentWidget().forward())
 		navtb.addAction(forward_btn)
 
-		reload_btn = QAction(QIcon('reload.png'),'reload', self)
+		reload_btn = QAction('reload', self)
 		reload_btn.setStatusTip("Reload page")
 		reload_btn.triggered.connect(lambda:self.tabs.currentWidget().reload())
 		navtb.addAction(reload_btn)
 
-		home_btn = QAction(QIcon('home.png'),'home', self)
+		home_btn = QAction('home', self)
 		home_btn.setStatusTip("Go home")
 		home_btn.triggered.connect(self.navigate_home)
 		navtb.addAction(home_btn)
@@ -114,7 +114,7 @@ class MainWindow(QMainWindow):
 
 
 app = QApplication(sys.argv)
-app.setApplicationName("Adi's Browser")
+app.setApplicationName("glaid browser engine")
 window  = MainWindow()
 app.exec_()
 
